@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="CtrBoard-H7_ALL"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake\;CMake Files\cmake\stm32cubemx\;CMake Files\CMSIS\;CMake Files\User\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/TMD/ClineTool/mingw64/bin/mingw32-make.exe -f &quot;D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="D:/TMD/ClineTool/mingw64/bin/mingw32-make.exe -f &quot;D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/TMD/ClineTool/mingw64/bin/mingw32-make.exe -f &quot;D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/TMD/ClineTool/mingw64/bin/mingw32-make.exe -f &quot;D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CtrBoard-H7_ALL">
+				<Option output="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake-build-debug/CtrBoard-H7_ALL.elf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DUser_Debug"/>
+					<Add option="-DUSE_HAL_DRIVER"/>
+					<Add option="-DSTM32H723xx"/>
+					<Add option="-DDEBUG"/>
+					<Add directory="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/CMSIS/Core/Inc"/>
+					<Add directory="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/CMSIS/DSP/Inc/dsp"/>
+					<Add directory="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/CMSIS/DSP/Inc"/>
+					<Add directory="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/CMSIS/DSP/PrivateInclude"/>
+					<Add directory="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/User/Algorithm/Inc"/>
+					<Add directory="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/User/App/Inc"/>
+					<Add directory="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/User/Bsp/Inc"/>
+					<Add directory="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/User/Start/Inc"/>
+					<Add directory="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake/stm32cubemx/../../Core/Inc"/>
+					<Add directory="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake/stm32cubemx/../../USB_DEVICE/App"/>
+					<Add directory="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake/stm32cubemx/../../USB_DEVICE/Target"/>
+					<Add directory="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc"/>
+					<Add directory="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy"/>
+					<Add directory="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include"/>
+					<Add directory="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS"/>
+					<Add directory="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F"/>
+					<Add directory="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake/stm32cubemx/../../Middlewares/ST/STM32_USB_Device_Library/Core/Inc"/>
+					<Add directory="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake/stm32cubemx/../../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc"/>
+					<Add directory="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include"/>
+					<Add directory="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake/stm32cubemx/../../Drivers/CMSIS/Include"/>
+					<Add directory="d:\tmd\clinetool\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1"/>
+					<Add directory="d:\tmd\clinetool\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/arm-none-eabi"/>
+					<Add directory="d:\tmd\clinetool\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/backward"/>
+					<Add directory="d:\tmd\clinetool\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/include"/>
+					<Add directory="d:\tmd\clinetool\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/include-fixed"/>
+					<Add directory="d:\tmd\clinetool\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/TMD/ClineTool/mingw64/bin/mingw32-make.exe -f &quot;D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake-build-debug/Makefile&quot;  VERBOSE=1 CtrBoard-H7_ALL"/>
+					<CompileFile command="D:/TMD/ClineTool/mingw64/bin/mingw32-make.exe -f &quot;D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/TMD/ClineTool/mingw64/bin/mingw32-make.exe -f &quot;D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/TMD/ClineTool/mingw64/bin/mingw32-make.exe -f &quot;D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CtrBoard-H7_ALL/fast">
+				<Option output="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake-build-debug/CtrBoard-H7_ALL.elf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DUser_Debug"/>
+					<Add option="-DUSE_HAL_DRIVER"/>
+					<Add option="-DSTM32H723xx"/>
+					<Add option="-DDEBUG"/>
+					<Add directory="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/CMSIS/Core/Inc"/>
+					<Add directory="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/CMSIS/DSP/Inc/dsp"/>
+					<Add directory="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/CMSIS/DSP/Inc"/>
+					<Add directory="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/CMSIS/DSP/PrivateInclude"/>
+					<Add directory="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/User/Algorithm/Inc"/>
+					<Add directory="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/User/App/Inc"/>
+					<Add directory="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/User/Bsp/Inc"/>
+					<Add directory="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/User/Start/Inc"/>
+					<Add directory="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake/stm32cubemx/../../Core/Inc"/>
+					<Add directory="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake/stm32cubemx/../../USB_DEVICE/App"/>
+					<Add directory="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake/stm32cubemx/../../USB_DEVICE/Target"/>
+					<Add directory="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc"/>
+					<Add directory="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy"/>
+					<Add directory="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include"/>
+					<Add directory="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS"/>
+					<Add directory="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F"/>
+					<Add directory="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake/stm32cubemx/../../Middlewares/ST/STM32_USB_Device_Library/Core/Inc"/>
+					<Add directory="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake/stm32cubemx/../../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc"/>
+					<Add directory="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include"/>
+					<Add directory="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake/stm32cubemx/../../Drivers/CMSIS/Include"/>
+					<Add directory="d:\tmd\clinetool\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1"/>
+					<Add directory="d:\tmd\clinetool\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/arm-none-eabi"/>
+					<Add directory="d:\tmd\clinetool\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/backward"/>
+					<Add directory="d:\tmd\clinetool\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/include"/>
+					<Add directory="d:\tmd\clinetool\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/include-fixed"/>
+					<Add directory="d:\tmd\clinetool\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/TMD/ClineTool/mingw64/bin/mingw32-make.exe -f &quot;D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake-build-debug/Makefile&quot;  VERBOSE=1 CtrBoard-H7_ALL/fast"/>
+					<CompileFile command="D:/TMD/ClineTool/mingw64/bin/mingw32-make.exe -f &quot;D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/TMD/ClineTool/mingw64/bin/mingw32-make.exe -f &quot;D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/TMD/ClineTool/mingw64/bin/mingw32-make.exe -f &quot;D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/TMD/ClineTool/mingw64/bin/mingw32-make.exe -f &quot;D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="D:/TMD/ClineTool/mingw64/bin/mingw32-make.exe -f &quot;D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/TMD/ClineTool/mingw64/bin/mingw32-make.exe -f &quot;D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/TMD/ClineTool/mingw64/bin/mingw32-make.exe -f &quot;D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/TMD/ClineTool/mingw64/bin/mingw32-make.exe -f &quot;D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="D:/TMD/ClineTool/mingw64/bin/mingw32-make.exe -f &quot;D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/TMD/ClineTool/mingw64/bin/mingw32-make.exe -f &quot;D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/TMD/ClineTool/mingw64/bin/mingw32-make.exe -f &quot;D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/CMSIS/DSP/Src/BasicMathFunctions/BasicMathFunctions.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/CMSIS/DSP/Src/BayesFunctions/BayesFunctions.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/CMSIS/DSP/Src/CommonTables/CommonTables.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/CMSIS/DSP/Src/ComplexMathFunctions/ComplexMathFunctions.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/CMSIS/DSP/Src/ControllerFunctions/ControllerFunctions.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/CMSIS/DSP/Src/DistanceFunctions/DistanceFunctions.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/CMSIS/DSP/Src/FastMathFunctions/FastMathFunctions.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/CMSIS/DSP/Src/FilteringFunctions/FilteringFunctions.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/CMSIS/DSP/Src/InterpolationFunctions/InterpolationFunctions.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/CMSIS/DSP/Src/MatrixFunctions/MatrixFunctions.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/CMSIS/DSP/Src/QuaternionMathFunctions/QuaternionMathFunctions.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/CMSIS/DSP/Src/SVMFunctions/SVMFunctions.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/CMSIS/DSP/Src/StatisticsFunctions/StatisticsFunctions.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/CMSIS/DSP/Src/SupportFunctions/SupportFunctions.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/CMSIS/DSP/Src/TransformFunctions/TransformFunctions.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/CMSIS/DSP/Src/WindowFunctions/WindowFunctions.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Core/Src/adc.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Core/Src/dma.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Core/Src/fdcan.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Core/Src/freertos.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Core/Src/gpio.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Core/Src/main.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Core/Src/spi.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Core/Src/stm32h7xx_hal_msp.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Core/Src/stm32h7xx_hal_timebase_tim.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Core/Src/stm32h7xx_it.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Core/Src/syscalls.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Core/Src/sysmem.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Core/Src/system_stm32h7xx.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Core/Src/tim.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Core/Src/usart.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc_ex.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma_ex.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_exti.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_fdcan.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash_ex.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_hsem.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c_ex.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_mdma.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pcd.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pcd_ex.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_spi.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_spi_ex.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_usb.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Middlewares/Third_Party/FreeRTOS/Source/croutine.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Middlewares/Third_Party/FreeRTOS/Source/list.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/port.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Middlewares/Third_Party/FreeRTOS/Source/queue.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Middlewares/Third_Party/FreeRTOS/Source/tasks.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/Middlewares/Third_Party/FreeRTOS/Source/timers.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/USB_DEVICE/App/usb_device.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/USB_DEVICE/App/usb_device.h">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/USB_DEVICE/App/usbd_cdc_if.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/USB_DEVICE/App/usbd_cdc_if.h">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/USB_DEVICE/App/usbd_desc.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/USB_DEVICE/App/usbd_desc.h">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/USB_DEVICE/Target/usbd_conf.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/USB_DEVICE/Target/usbd_conf.h">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/User/Algorithm/CRC_DJI.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/User/Algorithm/QuaternionEKF.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/User/Algorithm/Revolve.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/User/Algorithm/controller.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/User/Algorithm/kalman_filter.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/User/Algorithm/pid_temp.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/User/Algorithm/user_lib.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/User/App/DM_test.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/User/App/Gimbal_Task.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/User/App/IMU_Task.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/User/App/K3debug_Task.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/User/App/Monitor_Task.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/User/Bsp/BMI088Middleware.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/User/Bsp/BMI088driver.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/User/Bsp/DJI_Motor.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/User/Bsp/DM_Motor.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/User/Bsp/Image_RX.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/User/Bsp/NIMING.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/User/Bsp/RUI_DBUS.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/User/Bsp/RUI_MATH.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/User/Bsp/Referee.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/User/Bsp/VOFA.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/User/Bsp/VT13.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/User/Bsp/bsp_buzzer.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/User/Bsp/bsp_dwt.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/User/Bsp/bsp_imu_pwm.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/User/Bsp/can_bsp.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/User/Bsp/ws2812.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/User/Start/All_Init.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/User/Start/WHW_IRQN.c">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/startup_stm32h723xx.s">
+			<Option target="CtrBoard-H7_ALL"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake/gcc-arm-none-eabi.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake/stm32cubemx/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\cmake\stm32cubemx\"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/CMSIS/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\CMSIS\"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/User/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\User\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

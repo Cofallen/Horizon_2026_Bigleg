@@ -1,0 +1,194 @@
+ST Edge AI Core v2.2.0-20266 2adc00962
+Created date          : 2026-05-13 02:32:43
+Parameters            : generate --target stm32f4 --name network -m D:/RoboMaster/X_Cube_AI/ppo_policy.onnx --compression high --verbosity 1 --workspace C:/Users/17273/AppData/Local/Temp/mxAI_workspace13948024948662006056646910369583707 --output C:/Users/17273/.stm32cubemx/network_output
+
+Exec/report summary (generate)
+-------------------------------------------------------------------------------------------------------------
+model file         :   D:\RoboMaster\X_Cube_AI\ppo_policy.onnx                                               
+type               :   onnx                                                                                  
+c_name             :   network                                                                               
+compression        :   high                                                                                  
+options            :   allocate-inputs, allocate-outputs                                                     
+optimization       :   balanced                                                                              
+target/series      :   stm32f4                                                                               
+workspace dir      :   C:\Users\17273\AppData\Local\Temp\mxAI_workspace13948024948662006056646910369583707   
+output dir         :   C:\Users\17273\.stm32cubemx\network_output                                            
+model_fmt          :   float                                                                                 
+model_name         :   ppo_policy                                                                            
+model_hash         :   0x03ca88c64ec289113ac1ae8906b6521d                                                    
+params #           :   67,329 items (263.00 KiB)                                                             
+-------------------------------------------------------------------------------------------------------------
+input 1/1          :   'obs', f32(1x4), 16 Bytes, activations                                                
+output 1/1         :   'action', f32(1x1), 4 Bytes, activations                                              
+macc               :   72,449                                                                                
+weights (ro)       :   40,004 B (39.07 KiB) (1 segment) / -229,312(-85.1%) vs float model                    
+activations (rw)   :   2,048 B (2.00 KiB) (1 segment) *                                                      
+ram (total)        :   2,048 B (2.00 KiB) = 2,048 + 0 + 0                                                    
+-------------------------------------------------------------------------------------------------------------
+(*) 'input'/'output' buffers are allocated in the activations buffer
+
+Model name - ppo_policy
+------ ----------------------------------------------------- --------------- ---------------- -------- -------------------------------- --- ------------------ ------------------ ------------------ 
+m_id   layer (type,original)                                 oshape          param/size           macc                     connected to   | c_size             c_macc             c_type             
+------ ----------------------------------------------------- --------------- ---------------- -------- -------------------------------- --- ------------------ ------------------ ------------------ 
+1      policy_mlp_extract..t_0_weight (Placeholder, Gemm)    [b:256,c:4]     1,024/4,096                                                  | +1,024(+25.0%)     +1,280(+100.0%)    Dense_[0]          
+       policy_mlp_extract..net_0_bias (Placeholder, Gemm)    [b:256]         256/1,024                                                    | -1,024(-100.0%)                       
+------ ----------------------------------------------------- --------------- ---------------- -------- -------------------------------- --- ------------------ ------------------ ------------------ 
+3      policy_mlp_extract..t_2_weight (Placeholder, Gemm)    [b:256,c:256]   65,536/262,144                                               | -228,288(-87.1%)   +65,792(+100.0%)   Dense_[2]          
+       policy_mlp_extract..net_2_bias (Placeholder, Gemm)    [b:256]         256/1,024                                                    | -1,024(-100.0%)                       
+------ ----------------------------------------------------- --------------- ---------------- -------- -------------------------------- --- ------------------ ------------------ ------------------ 
+5      policy_action_net_weight (Placeholder, Gemm)          [b:1,c:256]     256/1,024                                                    | +4(+0.4%)          +257(+100.0%)      Dense_[o][4]       
+       policy_action_net_bias (Placeholder, Gemm)            [b:1]           1/4                                                          | -4(-100.0%)                           
+------ ----------------------------------------------------- --------------- ---------------- -------- -------------------------------- --- ------------------ ------------------ ------------------ 
+0      obs (Input, )                                         [b:1,c:4]                                                                    |                                       
+------ ----------------------------------------------------- --------------- ---------------- -------- -------------------------------- --- ------------------ ------------------ ------------------ 
+1      _mlp_extractor_pol..m_output_0 (Gemm, Gemm)           [b:1,c:256]                         1,280                              obs   |                    -1,280(-100.0%)    
+                                                                                                         policy_mlp_extract..t_0_weight   | 
+                                                                                                         policy_mlp_extract..net_0_bias   | 
+------ ----------------------------------------------------- --------------- ---------------- -------- -------------------------------- --- ------------------ ------------------ ------------------ 
+2      _mlp_extractor_pol..h_output_0 (Nonlinearity, Tanh)   [b:1,c:256]                         2,560   _mlp_extractor_pol..m_output_0   |                                       Nonlinearity_[1]   
+------ ----------------------------------------------------- --------------- ---------------- -------- -------------------------------- --- ------------------ ------------------ ------------------ 
+3      _mlp_extractor_pol..m_output_0 (Gemm, Gemm)           [b:1,c:256]                        65,792   _mlp_extractor_pol..h_output_0   |                    -65,792(-100.0%)   
+                                                                                                         policy_mlp_extract..t_2_weight   | 
+                                                                                                         policy_mlp_extract..net_2_bias   | 
+------ ----------------------------------------------------- --------------- ---------------- -------- -------------------------------- --- ------------------ ------------------ ------------------ 
+4      _mlp_extractor_pol..h_output_0 (Nonlinearity, Tanh)   [b:1,c:256]                         2,560   _mlp_extractor_pol..m_output_0   |                                       Nonlinearity_[3]   
+------ ----------------------------------------------------- --------------- ---------------- -------- -------------------------------- --- ------------------ ------------------ ------------------ 
+5      action (Gemm, Gemm)                                   [b:1,c:1]                             257   _mlp_extractor_pol..h_output_0   |                    -257(-100.0%)      
+                                                                                                               policy_action_net_weight   | 
+                                                                                                                 policy_action_net_bias   | 
+------ ----------------------------------------------------- --------------- ---------------- -------- -------------------------------- --- ------------------ ------------------ ------------------ 
+model/c-model: macc=72,449/72,449  weights=269,316/40,004 -229,312(-85.1%) activations=--/2,048 io=--/0
+
+
+
+Generated C-graph summary
+------------------------------------------------------------------------------------------------------------------------
+model name            : ppo_policy
+c-name                : network
+c-node #              : 5
+c-array #             : 12
+activations size      : 2048 (1 segment)
+weights size          : 40004 (1 segment)
+macc                  : 72449
+inputs                : ['obs_output']
+outputs               : ['action_output']
+
+C-Arrays (12)
+------ -------------------------------------------------------------- ------------- ------------------------- ------------------ --------- 
+c_id   name (*_array)                                                 item/size     domain/mem-pool           c-type             comment   
+------ -------------------------------------------------------------- ------------- ------------------------- ------------------ --------- 
+0      _mlp_extractor_policy_net_policy_net_0_Gemm_output_0_bias      256/1024      weights/weights           const float                  
+1      _mlp_extractor_policy_net_policy_net_0_Gemm_output_0_output    256/1024      activations/**default**   float                        
+2      _mlp_extractor_policy_net_policy_net_0_Gemm_output_0_weights   1024/4096     weights/weights           const float                  
+3      _mlp_extractor_policy_net_policy_net_1_Tanh_output_0_output    256/1024      activations/**default**   float                        
+4      _mlp_extractor_policy_net_policy_net_2_Gemm_output_0_bias      256/1024      weights/weights           const float                  
+5      _mlp_extractor_policy_net_policy_net_2_Gemm_output_0_output    256/1024      activations/**default**   float                        
+6      _mlp_extractor_policy_net_policy_net_2_Gemm_output_0_weights   65536/32832   weights/weights           const lut4_float             
+7      _mlp_extractor_policy_net_policy_net_3_Tanh_output_0_output    256/1024      activations/**default**   float                        
+8      action_bias                                                    1/4           weights/weights           const float                  
+9      action_output                                                  1/4           activations/**default**   float              /output   
+10     action_weights                                                 256/1024      weights/weights           const float                  
+11     obs_output                                                     4/16          activations/**default**   float              /input    
+------ -------------------------------------------------------------- ------------- ------------------------- ------------------ --------- 
+
+C-Layers (5)
+------ ------------------------------------------------------ ---- --------------- ------- ------- ----------------------------------------------------------------- ------------------ 
+c_id   name (*_layer)                                         id   layer_type      macc    rom     tensors                                                           shape (array id)   
+------ ------------------------------------------------------ ---- --------------- ------- ------- ----------------------------------------------------------------- ------------------ 
+0      _mlp_extractor_policy_net_policy_net_0_Gemm_output_0   1    Dense           1280    5120    I: obs_output                                                     f32(1x4) (11)      
+                                                                                                   W: _mlp_extractor_policy_net_policy_net_0_Gemm_output_0_weights   f32(256x4) (2)     
+                                                                                                   W: _mlp_extractor_policy_net_policy_net_0_Gemm_output_0_bias      f32(256) (0)       
+                                                                                                   O: _mlp_extractor_policy_net_policy_net_0_Gemm_output_0_output    f32(1x256) (1)     
+------ ------------------------------------------------------ ---- --------------- ------- ------- ----------------------------------------------------------------- ------------------ 
+1      _mlp_extractor_policy_net_policy_net_1_Tanh_output_0   2    Nonlinearity    2560    0       I: _mlp_extractor_policy_net_policy_net_0_Gemm_output_0_output    f32(1x256) (1)     
+                                                                                                   O: _mlp_extractor_policy_net_policy_net_1_Tanh_output_0_output    f32(1x256) (3)     
+------ ------------------------------------------------------ ---- --------------- ------- ------- ----------------------------------------------------------------- ------------------ 
+2      _mlp_extractor_policy_net_policy_net_2_Gemm_output_0   3    Dense           65792   33856   I: _mlp_extractor_policy_net_policy_net_1_Tanh_output_0_output    f32(1x256) (3)     
+                                                                                                   W: _mlp_extractor_policy_net_policy_net_2_Gemm_output_0_weights   c4(256x256) (6)    
+                                                                                                   W: _mlp_extractor_policy_net_policy_net_2_Gemm_output_0_bias      f32(256) (4)       
+                                                                                                   O: _mlp_extractor_policy_net_policy_net_2_Gemm_output_0_output    f32(1x256) (5)     
+------ ------------------------------------------------------ ---- --------------- ------- ------- ----------------------------------------------------------------- ------------------ 
+3      _mlp_extractor_policy_net_policy_net_3_Tanh_output_0   4    Nonlinearity    2560    0       I: _mlp_extractor_policy_net_policy_net_2_Gemm_output_0_output    f32(1x256) (5)     
+                                                                                                   O: _mlp_extractor_policy_net_policy_net_3_Tanh_output_0_output    f32(1x256) (7)     
+------ ------------------------------------------------------ ---- --------------- ------- ------- ----------------------------------------------------------------- ------------------ 
+4      action                                                 5    Dense           257     1028    I: _mlp_extractor_policy_net_policy_net_3_Tanh_output_0_output    f32(1x256) (7)     
+                                                                                                   W: action_weights                                                 f32(1x256) (10)    
+                                                                                                   W: action_bias                                                    f32(1) (8)         
+                                                                                                   O: action_output                                                  f32(1x1) (9)       
+------ ------------------------------------------------------ ---- --------------- ------- ------- ----------------------------------------------------------------- ------------------ 
+
+
+
+Number of operations per c-layer
+------- ------ ----------------------------------------------- -------- -------------- 
+c_id    m_id   name (type)                                          #op           type 
+------- ------ ----------------------------------------------- -------- -------------- 
+0       1      _mlp_extractor_pol..m_output_0 (Dense)             1,280   smul_f32_f32 
+1       2      _mlp_extractor_pol..h_output_0 (Nonlinearity)      2,560     op_f32_f32 
+2       3      _mlp_extractor_pol..m_output_0 (Dense)            65,792    smul_f32_f4 
+3       4      _mlp_extractor_pol..h_output_0 (Nonlinearity)      2,560     op_f32_f32 
+4       5      action (Dense)                                       257   smul_f32_f32 
+------- ------ ----------------------------------------------- -------- -------------- 
+total                                                            72,449 
+
+Number of operation types
+---------------- -------- ----------- 
+operation type          #           % 
+---------------- -------- ----------- 
+smul_f32_f32        1,537        2.1% 
+op_f32_f32          5,120        7.1% 
+smul_f32_f4        65,792       90.8% 
+
+Complexity report (model)
+------ ------------------------------------------ ------------------------- ------------------------- ------ 
+m_id   name                                       c_macc                    c_rom                     c_id   
+------ ------------------------------------------ ------------------------- ------------------------- ------ 
+1      policy_mlp_extractor_policy_net_0_weight   |                  1.8%   |||               12.8%   [0]    
+3      policy_mlp_extractor_policy_net_2_weight   ||||||||||||||||  90.8%   ||||||||||||||||  84.6%   [2]    
+5      policy_action_net_weight                   |                  0.4%   |                  2.6%   [4]    
+2      _mlp_extractor_policy_net_po..h_output_0   |                  3.5%   |                  0.0%   [1]    
+4      _mlp_extractor_policy_net_po..h_output_0   |                  3.5%   |                  0.0%   [3]    
+------ ------------------------------------------ ------------------------- ------------------------- ------ 
+macc=72,449 weights=40,004 act=2,048 ram_io=0
+ 
+ Requested memory size by section - "stm32f4" target
+ ------------------------------ ------- -------- ------- ------- 
+ module                            text   rodata    data     bss 
+ ------------------------------ ------- -------- ------- ------- 
+ NetworkRuntime1020_CM4_GCC.a     6,028        0       0       0 
+ network.o                          536       40   1,584     140 
+ network_data.o                      48       16      88       0 
+ lib (toolchain)*                   960       12       0       0 
+ ------------------------------ ------- -------- ------- ------- 
+ RT total**                       7,572       68   1,672     140 
+ ------------------------------ ------- -------- ------- ------- 
+ weights                              0   40,008       0       0 
+ activations                          0        0       0   2,048 
+ io                                   0        0       0       0 
+ ------------------------------ ------- -------- ------- ------- 
+ TOTAL                            7,572   40,076   1,672   2,188 
+ ------------------------------ ------- -------- ------- ------- 
+ *  toolchain objects (libm/libgcc*)
+ ** RT AI runtime objects (kernels+infrastructure)
+  
+  Summary - "stm32f4" target
+  ---------------------------------------------------
+               FLASH (ro)      %*   RAM (rw)       % 
+  ---------------------------------------------------
+  RT total          9,312   18.9%      1,812   46.9% 
+  ---------------------------------------------------
+  TOTAL            49,320              3,860         
+  ---------------------------------------------------
+  *  rt/total
+
+
+Generated files (7)
+------------------------------------------------------------------ 
+C:\Users\17273\.stm32cubemx\network_output\network_data_params.h   
+C:\Users\17273\.stm32cubemx\network_output\network_data_params.c   
+C:\Users\17273\.stm32cubemx\network_output\network_data.h          
+C:\Users\17273\.stm32cubemx\network_output\network_data.c          
+C:\Users\17273\.stm32cubemx\network_output\network_config.h        
+C:\Users\17273\.stm32cubemx\network_output\network.h               
+C:\Users\17273\.stm32cubemx\network_output\network.c               

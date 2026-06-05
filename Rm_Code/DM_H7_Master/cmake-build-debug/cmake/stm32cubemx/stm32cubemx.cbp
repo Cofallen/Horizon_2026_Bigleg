@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="stm32cubemx"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake\;CMake Files\cmake\stm32cubemx\;CMake Files\CMSIS\;CMake Files\User\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake-build-debug/cmake/stm32cubemx"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/TMD/ClineTool/mingw64/bin/mingw32-make.exe -f &quot;D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake-build-debug/cmake/stm32cubemx/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="D:/TMD/ClineTool/mingw64/bin/mingw32-make.exe -f &quot;D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake-build-debug/cmake/stm32cubemx/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/TMD/ClineTool/mingw64/bin/mingw32-make.exe -f &quot;D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake-build-debug/cmake/stm32cubemx/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/TMD/ClineTool/mingw64/bin/mingw32-make.exe -f &quot;D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake-build-debug/cmake/stm32cubemx/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake/gcc-arm-none-eabi.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/cmake/stm32cubemx/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\cmake\stm32cubemx\"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/CMSIS/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\CMSIS\"/>
+		</Unit>
+		<Unit filename="D:/Workspace/Clion_Space/Horizon_framework/DM_H7_Master/User/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\User\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
